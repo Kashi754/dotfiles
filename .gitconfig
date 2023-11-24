@@ -1,0 +1,8 @@
+[user]
+	email = arigorn15@gmail.com\n
+	name = Terry Petersen
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
