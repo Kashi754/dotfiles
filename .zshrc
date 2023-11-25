@@ -84,7 +84,9 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git 
+    dotenv
+    httpie
+    gitfast
     zsh-autosuggestions
     zsh-syntax-highlighting
   )
@@ -121,6 +123,8 @@ alias ls="eza --long --header --icons --git --git-ignore"
 alias cat="bat --color=always"
 alias bard-environment="source $HOME/bard-environment/bin/activate"
 alias clear="clear && neofetch"
+alias mv="mv -i"
+alias rm="rm -i"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
