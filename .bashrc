@@ -124,3 +124,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Launch neofetch on Terminal launch
 neofetch
+. "$HOME/.cargo/env"
