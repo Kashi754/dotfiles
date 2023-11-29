@@ -7,26 +7,26 @@
 # Closebox73
 
 # icon font based openweathermap.org data
-ICON_01D=""
-ICON_01N=""
-ICON_02D=""
-ICON_02N=""
-ICON_03D=""
-ICON_03N=""
-ICON_04D=""
-ICON_04N=""
-ICON_09D=""
-ICON_09N=""
-ICON_10D=""
-ICON_10N=""
-ICON_11D=""
-ICON_11N=""
-ICON_13D=""
-ICON_13N=""
-ICON_50D=""
-ICON_50N=""
+ICON_01D=""
+ICON_01N=""
+ICON_02D=""
+ICON_02N=""
+ICON_03D=""
+ICON_03N=""
+ICON_04D=""
+ICON_04N=""
+ICON_09D=""
+ICON_09N=""
+ICON_10D=""
+ICON_10N=""
+ICON_11D=""
+ICON_11N=""
+ICON_13D=""
+ICON_13N=""
+ICON_50D=""
+ICON_50N=""
 
-WEATHER_ICON=$(cat ~/.cache/weather.json | jq -r '.weather[0].icon')
+WEATHER_ICON=$(/bin/cat ~/.cache/weather.json | jq -r '.weather[0].icon')
 
 if [[ "${WEATHER_ICON}" = *01d* ]]; then
     echo "${ICON_01D}"
@@ -64,7 +64,6 @@ elif [[ "${WEATHER_ICON}" = *50d* ]]; then
     echo "${ICON_50D}"
 elif [[ "${WEATHER_ICON}" = *50n* ]]; then
     echo "${ICON_50N}"
-	fi
 fi
 
 exit
