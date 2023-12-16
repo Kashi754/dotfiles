@@ -1,8 +1,13 @@
 [user]
-	email = arigorn15@gmail.com\n
+	email = arigorn15@gmail.com
 	name = Terry Petersen
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
